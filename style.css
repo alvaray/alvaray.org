@@ -1,0 +1,86 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, p, blockquote, pre,
+a, img
+em, strong,
+dl, dt, dd, ol, ul, li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+body {
+	background-color: linen;
+	font: 110%/1.35 Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	padding: 2em;
+}
+
+#wrapper {
+	max-width: 36em;
+	margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 { font-family: Futura, "Trebuchet MS", Arial, sans-serif; }
+
+h1 { font-size: 200%; }
+
+h2 { font-size: 175%; }
+
+h3 {
+	font-size: 125%;
+	margin-top: 0.5em;
+	color: dimgray;
+}
+
+h4 {
+	font-size: 115%;
+}
+
+h5 { margin-top: 1em; }
+
+p { margin-top: 1em; }
+
+a {
+	color: dimgray;
+	text-decoration: underline;
+}
+	a:hover { color: black; }
+
+h4 a { color: black; }
+
+h5 a {
+	text-decoration: none;
+	color: black;
+}
+	h4 a:hover,
+	h5 a:hover {
+		color: dimgray;
+	}
+
+ul { margin-top: 1em; }
+
+pre {
+	margin-top: 1em;
+	font-family: monospace;
+	font-size: 110%;
+}
+
+blockquote {
+	margin-top: 1em;
+	padding: 0 2em;
+	font-style: italic;
+}
+
+.wrap { word-wrap: break-word; }
+
+.small { font-size: 90%; }
