@@ -69,6 +69,8 @@ h5 a {
 
 ul { margin-top: 1em; }
 
+li { margin: 0.5em 0; }
+
 pre {
 	margin-top: 1em;
 	font-family: monospace;
