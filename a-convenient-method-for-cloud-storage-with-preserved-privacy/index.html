@@ -1,0 +1,20 @@
+---
+layout: page
+title: A convenient method for cloud storage with preserved privacy
+description: How to store sensitive files with the ease of Dropbox but fully secure.
+---
+<p>I have seen mentions of this on the web but not in 2600 and since I think it can serve many readers of these pages well, I decided to submit an article on the subject.</p>
+
+<p>There are many good and convenient cloud services out there for storing files. In light however of recent events regarding NSA mass surveillance of internet traffic, once again the question of privacy has made it into our collective conscience. This article describes a simple mechanism for storing sensitive data on any such service in a way that makes it unavailable to prying eyes. Most important from the service provider, would they decide to give the data to a third party. The answer, as always, is client-side encryption, since we cannot and should not trust a service that claims to encrypt your data in a way that makes it off-limits to them. You know, trust no one. But manual encryption and decryption of data before storing it online can be a hassle and we want to remove as many steps as possible.</p>
+
+<p>I will use the popular Dropbox service as an example, but the described method of course applies to any similar service. I will also assume Mac OS X only because that’s what I use myself, but the same method should be available to all operating systems with some sort of support for creating and encrypting disk images.</p>
+
+<p>First off, there is a special “sparse” disk image format which means that even though the mounted volume can have any size, it will only occupy disk space according to how much data the created disk holds, plus a bit of overhead. For example, I can create a 1 GB sparse disk image but it will initially only use 40 MB of space and then grow as I add files to it. The built-in Disk Utility application in OS X can create such images, and also encrypt them using 256-bit AES and a password you supply. All of this can be configured in the dialog that pops up when clicking “New Image”. Be sure to set the options for disk size, encryption and the image format “sparse disk image”. The resulting file is a secure disk that you can happily put in Dropbox to be synced, and share it with others who have the password.</p>
+
+<p>Once the disk image is in Dropbox, you continue using it by just double-clicking the image to mount it, which will ask for your password. For even higher security, don’t opt to save the password in your keychain. Now copy the files you want to protect to the mounted disk and eject it when you are done. The disk image will immediately sync to Dropbox but none of the data on it will ever have left your computer unencrypted. Sitting on the Dropbox servers will be a binary blob of data that no one without the password can open, due to the nature of strong encryption. The disk image will take up as little space as possible on your computer, and if you want more space on it later, the Disk Utility tool can resize it dynamically without altering the content.</p>
+
+<p>What we have done here is to use built-in tools of the operating system to create a secure storage, while leveraging the general usefulness of a service like Dropbox. You will obviously not be able to browse the files on this disk through the Dropbox web interface or anything other than your computer, but in that specific setting it is great, especially since it’s super easy to share the disk with anyone on a similar setup.</p>
+
+<p>To sum it up: Don’t trust cloud services no matter what privacy claims they make. Always rely on client-side encryption rather than server-side. Make use of the good services out there but bend them to serve your own purposes. In other words, rely on the hacker mentality and maintain control over your own data.</p>
+
+<h5><a href="/">← Back to the front page</a></h5>
