@@ -67,6 +67,11 @@ h5 a {
 		color: dimgray;
 	}
 
+h6 {
+	font-size: 100%;
+	margin: 1em 0;
+}
+
 ul { margin-top: 1em; }
 
 li { margin: 0.5em 0; }
@@ -75,6 +80,7 @@ pre {
 	margin-top: 1em;
 	font-family: monospace;
 	font-size: 110%;
+	white-space: normal;
 }
 
 blockquote {

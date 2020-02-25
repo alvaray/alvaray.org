@@ -1,0 +1,14 @@
+---
+layout: page
+---
+{% assign pages = site.pages | sort: 'order' %}
+<ul>
+    {% for p in pages %}
+    {% if p.order %}
+    <li>
+        <h4><a href="{{ p.url }}">{{ p.title }}</a></h4>
+        <span class="small">{{ p.source }}</span>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>

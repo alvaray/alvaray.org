@@ -25,8 +25,9 @@
 		{% else %}
 			<h2>{{ page.title }}</h2>
 			<h3>by <a href="mailto:{{ site.email }}">{{ site.author }}</a></h3>
+			<h6>{{ page.source }}</h4>
 		{% endif %}
-		{{ page.content }}
+		{{ content }}
 		{% if page.path == 'index.html' %}
 			<p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
 		{% endif %}
